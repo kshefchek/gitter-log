@@ -1,0 +1,34 @@
+{
+  "name": "gitter-log",
+  "version": "1.0.0",
+  "description": "Use Gitter to log notes and then extract them into a file.",
+  "main": "index.js",
+  "scripts": {
+    "version": "source .secret/config.sh && ./node_modules/.bin/gitter-export-room --version",
+    "help": "source .secret/config.sh && ./node_modules/.bin/gitter-export-room --help",
+    "list": "source .secret/config.sh && ./node_modules/.bin/gitter-export-room list",
+    "log": "source .secret/config.sh && (./node_modules/.bin/gitter-export-room id ${GITTER_ROOM} > ${JSON_OUTPUT}) && echo \"${JSON_OUTPUT} created\"",
+    "logmd": "source .secret/config.sh && npm run log && (cat ${JSON_OUTPUT} | ./postprocess.sh ${MD_OUTPUT}) && echo \"${MD_OUTPUT} created\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoctorBud/gitter-log.git"
+  },
+  "keywords": [
+    "gitter",
+    "log",
+    "messages",
+    "notes",
+    "status",
+    "report"
+  ],
+  "author": "Daniel Keith <dan@quantumclay.com> (https://doctorbud.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DoctorBud/gitter-log/issues"
+  },
+  "homepage": "https://github.com/DoctorBud/gitter-log#readme",
+  "dependencies": {
+    "gitter-export-room": "^0.3.0"
+  }
+}
