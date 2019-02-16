@@ -8,7 +8,7 @@
     "help": "source .secret/config.sh && ./node_modules/.bin/gitter-export-room --help",
     "list": "source .secret/config.sh && ./node_modules/.bin/gitter-export-room list",
     "log": "source .secret/config.sh && (./node_modules/.bin/gitter-export-room id ${GITTER_ROOM} > ${JSON_OUTPUT}) && echo \"${JSON_OUTPUT} created\"",
-    "logmd": "source .secret/config.sh && npm run log && (cat ${JSON_OUTPUT} | ./postprocess.sh ${MD_OUTPUT}) && echo \"${MD_OUTPUT} created\""
+    "logmd": "source .secret/config.sh && npm run log && (cat ${JSON_OUTPUT} | ./postprocess.js > ${MD_OUTPUT}) && echo \"${MD_OUTPUT} created\""
   },
   "repository": {
     "type": "git",

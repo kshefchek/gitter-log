@@ -3,6 +3,7 @@
 
 # Secret keys and such
 .secret/config.sh
+.secret/aliases.json
 
 # Logs
 logs
