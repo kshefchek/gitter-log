@@ -1,12 +1,13 @@
 # gitter-log
 
-TPS Reports via Gitter
-
-I use this to extract the contents of a specific Gitter room into a Markdown document consisting of a bunch of timestamped messages. I then use this to generate a TPS report for various projects I'm involved with. Other folks might find it handy for similar purposes, or may use it create a readable digest of a Gitter room.
+Utility for fetching gitter chat data (ie messages and metadata)
 
 ## Installation
 
 ### Install NodeJS dependencies
+
+    nvm install v8.12.0
+    npm install
 
 Begin by installing any NodeJS modules. Currently the only NodeJS dependency is the [gitter-export-room]() command, which deals with using the Gitter client API to access the desired Room's data.
 
