@@ -4,11 +4,11 @@
   "description": "Use Gitter to log notes and then extract them into a file.",
   "main": "index.js",
   "scripts": {
-    "version": "source .secret/config.sh && ./node_modules/.bin/gitter-export-room --version",
-    "help": "source .secret/config.sh && ./node_modules/.bin/gitter-export-room --help",
-    "list": "source .secret/config.sh && ./node_modules/.bin/gitter-export-room list",
-    "log": "source .secret/config.sh && (./node_modules/.bin/gitter-export-room id ${GITTER_ROOM} > ${JSON_OUTPUT}) && echo \"${JSON_OUTPUT} created\"",
-    "logmd": "source .secret/config.sh && npm run log && (cat ${JSON_OUTPUT} | ./postprocess.js > ${MD_OUTPUT}) && echo \"${MD_OUTPUT} created\""
+    "version": ". .secret/config.sh && ./node_modules/.bin/gitter-export-room --version",
+    "help": ". .secret/config.sh && ./node_modules/.bin/gitter-export-room --help",
+    "list": ". .secret/config.sh && ./node_modules/.bin/gitter-export-room list",
+    "log": ". .secret/config.sh && (./node_modules/.bin/gitter-export-room id ${GITTER_ROOM} > ${JSON_OUTPUT}) && echo \"${JSON_OUTPUT} created\"",
+    "logmd": ". .secret/config.sh && npm run log && (cat ${JSON_OUTPUT} | ./postprocess.js > ${MD_OUTPUT}) && echo \"${MD_OUTPUT} created\""
   },
   "repository": {
     "type": "git",
