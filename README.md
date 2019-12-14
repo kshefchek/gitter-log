@@ -17,6 +17,9 @@ This code currently relies upon the [jq](https://stedolan.github.io/jq/) tool, w
 
 ```bash
 brew install jq
+or
+apt-get install jq
+etc...
 ```
 
 *Note: I may abandon the use of `jq` in favor of plain-old NodeJS, to simplify the installation and documentation.*
